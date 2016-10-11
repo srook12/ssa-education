@@ -9,7 +9,13 @@ use education;
 create table major(
 	id int primary key auto_increment,
 	name varchar(50) not null,
+	req_credits int not null,
 	description varchar(1000) not null
+);
+
+create table school_year(
+	id int primary key auto_increment,
+	semester varchar(20) not null
 );
 
 create table department(
@@ -34,12 +40,13 @@ create table student(
 	id int primary key auto_increment,
 	first_name varchar(30) not null,
 	last_name varchar(30) not null,
-	sat int,
-	gpa decimal(4, 2) not null,
+	first_semester int not null,
+	gpa decimal(4, 2) default 0.00,
 	major_id int,
 	foreign key (major_id) references major(id)
 		on delete set null
-		on update cascade
+		on update cascade,
+	foreign key (first_semester) references school_year(id)
 );
 
 create table class(
