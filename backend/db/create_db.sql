@@ -36,18 +36,43 @@ create table instructor(
 		on update cascade
 );
 
+-- create table account(
+	-- id int primary key auto_increment,
+	-- username varchar(10),
+	-- password varchar(50)
+-- );
+
 create table student(
 	id int primary key auto_increment,
 	first_name varchar(30) not null,
 	last_name varchar(30) not null,
-	first_semester int not null,
-	gpa decimal(4, 2) default 0.00,
-	major_id int,
+	first_semester int,
+	gpa decimal(4,2) default 0.00,
 	foreign key (major_id) references major(id)
 		on delete set null
 		on update cascade,
 	foreign key (first_semester) references school_year(id)
 );
+
+-- create table student(
+	-- id int primary key auto_increment,
+	-- first_name varchar(30) not null,
+	-- middle_init varchar(1),
+	-- last_name varchar(30) not null,
+	-- street varchar(30),
+	-- _state varchar(5),
+	-- zip varchar(10),
+	-- sid int not null,
+	-- first_semester int not null,
+	-- gpa decimal(4, 2) default 0.00,
+	-- username_id int,
+	-- major_id int,
+	-- foreign key (major_id) references major(id)
+		-- on delete set null
+		-- on update cascade,
+	-- foreign key (username_id) references account(id),
+	-- foreign key (first_semester) references school_year(id)
+-- );
 
 create table class(
 	id int primary key auto_increment,
