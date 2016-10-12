@@ -48,6 +48,7 @@ create table student(
 	last_name varchar(30) not null,
 	first_semester int,
 	gpa decimal(4,2) default 0.00,
+	major_id int,
 	foreign key (major_id) references major(id)
 		on delete set null
 		on update cascade,
