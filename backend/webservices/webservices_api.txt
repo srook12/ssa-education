@@ -18,6 +18,12 @@ Method :  GET
 Params :  Integer id
 Returns:  A JSON representation of the major with id {id}
 
+Func   :  getAllClassesForMajor
+URL    :  /majors/list_major_classes/{id}
+Method :  GET
+Params :  Integer id
+Returns:  A JSON representation of the classes required for the major with id {id}
+
 Func   :  addMajor
 URL    :  /majors/major
 Method :  POST
