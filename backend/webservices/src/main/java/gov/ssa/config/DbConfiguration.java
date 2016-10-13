@@ -15,6 +15,7 @@ import gov.ssa.entity.Class;
 import gov.ssa.entity.Department;
 import gov.ssa.entity.Instructor;
 import gov.ssa.entity.Major;
+import gov.ssa.entity.MajorClass;
 import gov.ssa.entity.SchoolYear;
 import gov.ssa.entity.Student;
 
@@ -45,6 +46,7 @@ public class DbConfiguration {
         													  .addAnnotatedClasses(Department.class)
         													  .addAnnotatedClasses(Class.class)
         													  .addAnnotatedClasses(Instructor.class)
+        													  .addAnnotatedClasses(MajorClass.class)
                 .buildSessionFactory();
     }
 

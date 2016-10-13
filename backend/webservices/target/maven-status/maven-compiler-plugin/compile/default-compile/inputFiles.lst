@@ -20,6 +20,7 @@ C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\MajorControlle
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\impl\ClassService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\SchoolYearController.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\impl\StudentDao.java
+C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\entity\MajorClass.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\iface\IStudentService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\impl\MajorService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\iface\IStudentDao.java

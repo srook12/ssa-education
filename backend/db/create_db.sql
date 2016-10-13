@@ -119,6 +119,7 @@ create table major_class_relationship(
 	id int primary key auto_increment,
 	major_id int not null,
 	class_id int not null,
+--	primary key(major_id, class_id),
 	foreign key (major_id) references major(id)
 		on delete cascade
 		on update cascade,

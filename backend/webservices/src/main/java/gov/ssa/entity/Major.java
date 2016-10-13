@@ -1,15 +1,31 @@
 package gov.ssa.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="major")
-public class Major {
+public class Major implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4730591621931799626L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
@@ -63,5 +79,6 @@ public class Major {
 
 	public void setReq_credits(int req_credits) {
 		this.req_credits = req_credits;
-	}	
+	}
+
 }

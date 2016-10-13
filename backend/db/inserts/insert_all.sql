@@ -10,4 +10,4 @@ source c:/ssa-education/backend/db/inserts/insert_classes.sql;
 
 source c:/ssa-education/backend/db/inserts/insert_instructors.sql;
 
--- source c:/ssa-education/backend/db/inserts/insert_major_class.sql;
+source c:/ssa-education/backend/db/inserts/insert_major_class.sql;

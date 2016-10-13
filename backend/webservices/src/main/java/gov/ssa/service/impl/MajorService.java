@@ -4,12 +4,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import gov.ssa.dao.iface.IMajorDao;
 import gov.ssa.entity.Major;
+import gov.ssa.entity.Class;
 import gov.ssa.service.iface.IMajorService;
 
 @Service
+@Transactional
 public class MajorService implements IMajorService {
 	@Autowired
 	private IMajorDao majorDao;	
@@ -20,10 +23,15 @@ public class MajorService implements IMajorService {
 	}
 
 	@Override
+	public List<Class> getAllClassesForMajor(int id) {
+		return majorDao.getAllClassesForMajor(id);
+	}
+	
+	@Override
 	public Major getMajorById(int majorId) {
 		return majorDao.getMajorById(majorId);
 	}
-
+	
 	@Override
 	public void addMajor(Major major) {
 		majorDao.addMajor(major);
