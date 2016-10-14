@@ -1,5 +1,9 @@
 source c:/ssa-education/backend/db/inserts/insert_majors.sql;
 
+source c:/ssa-education/backend/db/inserts/insert_buildings.sql;
+
+source c:/ssa-education/backend/db/inserts/insert_classrooms.sql;
+
 source c:/ssa-education/backend/db/inserts/insert_school_year.sql;
 
 source c:/ssa-education/backend/db/inserts/insert_students.sql;

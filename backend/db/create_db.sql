@@ -13,6 +13,11 @@ create table major(
 	description varchar(1000) not null
 );
 
+create table building(
+	id int primary key auto_increment,
+	name varchar(30)
+);
+
 create table school_year(
 	id int primary key auto_increment,
 	semester varchar(20) not null
@@ -89,9 +94,10 @@ create table class(
 
 create table classroom(
 	id int primary key auto_increment,
-	building varchar(30) not null,
+	building_id int,
 	num int not null,
-	num_seats int not null
+	num_seats int not null,
+	foreign key (building_id) references building(id)
 );
 
 create table class_list(
