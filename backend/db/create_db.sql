@@ -95,7 +95,7 @@ create table class(
 create table classroom(
 	id int primary key auto_increment,
 	building_id int,
-	num int not null,
+	num varchar(5) not null,
 	num_seats int not null,
 	foreign key (building_id) references building(id)
 );
@@ -103,13 +103,20 @@ create table classroom(
 create table class_list(
 	id int primary key auto_increment,
 	class_id int,
-	section int not null,
-	semester varchar(15) not null,
+	crn varchar(10) not null,
+	sect varchar(5) not null,
+	semester int,
 	classroom_id int,
-	days set ("M", "T", "W", "R", "F", "S") not null,
+	mon boolean default false,
+	tues boolean default false,
+	wed boolean default false,
+	thurs boolean default false,
+	fri boolean default false,
+	sat boolean default false,
+	onl boolean default false,
 	instructor_id int,
-	begin_time time not null,
-	end_time time not null,
+	begin_time time,
+	end_time time,
 	foreign key (class_id) references class(id)
 		on delete set null
 		on update cascade,
@@ -118,7 +125,8 @@ create table class_list(
 		on update cascade,
 	foreign key (instructor_id) references instructor(id)
 		on delete set null
-		on update cascade
+		on update cascade,
+	foreign key (semester) references school_year(id)
 );
 
 create table major_class_relationship(
