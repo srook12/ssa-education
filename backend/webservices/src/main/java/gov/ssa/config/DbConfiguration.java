@@ -11,7 +11,10 @@ import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import gov.ssa.entity.Building;
 import gov.ssa.entity.Class;
+import gov.ssa.entity.ClassList;
+import gov.ssa.entity.Classroom;
 import gov.ssa.entity.Department;
 import gov.ssa.entity.Instructor;
 import gov.ssa.entity.Major;
@@ -47,6 +50,9 @@ public class DbConfiguration {
         													  .addAnnotatedClasses(Class.class)
         													  .addAnnotatedClasses(Instructor.class)
         													  .addAnnotatedClasses(MajorClass.class)
+        													  .addAnnotatedClasses(Building.class)
+        													  .addAnnotatedClasses(Classroom.class)
+        													  .addAnnotatedClasses(ClassList.class)
                 .buildSessionFactory();
     }
 

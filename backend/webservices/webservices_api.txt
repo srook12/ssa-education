@@ -228,3 +228,55 @@ URL    :  /instructors/instructor/{id}
 Method :  DELETE
 Params :  Integer id
 Returns:  Nothing. Deletes the given instructor object from the database.
+
+---------
+ClassList
+---------
+
+Func   :  getClassList
+URL    :  /class_list
+Method :  GET
+Params :  None
+Returns:  A JSON list of all ClassList objects. Probably only suitable for testing. Should use semester in conjunction.
+
+Func   :  getClassesBySemester
+URL    :  /class_list/list_by_semester/{semester}
+Method :  GET
+Params :  Semester id
+Returns:  A JSON list of all ClassList objects for the semester with the given id.
+
+Func   :  getClassListByDepartment
+URL    :  /class_list/list_by_department/{semester}/{id}
+Method :  GET
+Params :  Semester id, department id
+Returns:  A JSON list of all ClassList objects for the given department id for the semester with the given id.
+
+Func   :  getSectionsOfClass
+URL    :  /class_list/sections_by_class/{semester}/{id}
+Method :  GET
+Params :  Semester id, class id
+Returns:  A JSON list of all ClassList objects for the given class id for the semester with the given id.
+
+Func   :  getClassListByid
+URL    :  /class_list/{id}
+Method :  GET
+Params :  Semester id
+Returns:  A JSON list of the particular ClassList instance with the given id
+
+Func   :  addClassList
+URL    :  /class_list
+Method :  POST
+Params :  ClassList cl
+Returns:  Nothing. Inserts the ClassList object into the database.
+
+Func   :  updateClassList
+URL    :  /class_list
+Method :  PUT
+Params :  ClassList cl
+Returns:  Nothing. Updates the ClassList object in the database.
+
+Func   :  deleteClassList
+URL    :  /class_list
+Method :  DELETE
+Params :  id
+Returns:  Nothing. Deletes the given ClassList object identified by id.
