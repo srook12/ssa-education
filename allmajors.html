@@ -1,0 +1,24 @@
+
+<h1>Available Majors for 2017 Semester</h1>
+<div id="student" >
+	
+	<table class="table table-striped" >
+		<thead>
+			<tr ><td>ID</td><td>Name</td><td>Required Credits</td><td>Description</td></tr>
+		</thead>
+		<tbody>
+		<tr  ng-repeat="major in ctrl.majors">
+			<!--<td > <a href = "#/classes/class">{{class.num}} {{class.name}} {{class.description}}</a></td> -->
+			<td ng-bind="major.id"></td>
+			
+			<!--<td ng-bind="dept.name"></td>-->
+			<td ><a href = "#/majors/list_major_classes/{{major.id}}">{{major.name}}</a></td>
+			<td ng-bind="major.req_credits"></td>
+			<td ng-bind="major.description"></td>
+			
+			
+		</tr>
+		</tbody>
+		
+	</table>
+</div>

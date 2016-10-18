@@ -1,18 +1,21 @@
-<div id="student">
-	<h1>Classes</h1>
-	<table class="table table-striped">
+
+<h1>Classes</h1>
+<div id="student" >
+	
+	<table class="table table-striped" >
 		<thead>
-			<tr><td>Num</td><td>Name</td><td>Description</td></tr>
+			<tr ><td>ID</td><td>Name</td><td>Description</td></tr>
 		</thead>
 		<tbody>
-		<tr ng-repeat="class in ctrl.classes">
-			<!--<td > <a href = "#/classes/class">{{class.num}} {{class.name}} {{class.description}}</a></td> -->
-			<td ng-bind="class.num"></td>
-			<td ng-bind="class.name"></td>
+		<tr  ng-repeat="class in ctrl.classes">
+			<!--<td > <a href = "#/classes/class/{{class.id}}">{{class.num}} {{class.name}} {{class.description}}</a></td> -->
+			<td ng-bind="class.id"></td>
+			<td><a href = "#/classes/class/{{class.id}}">{{class.name}}</td>
 			<td ng-bind="class.description"></td>
-			<td ng-bind="'&nbsp &nbsp' + class.gpa"></td>
+			
 		</tr>
 		</tbody>
 		
 	</table>
 </div>
+

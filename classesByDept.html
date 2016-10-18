@@ -1,0 +1,21 @@
+<div id="student" >
+	<h1>Classes by Department</h1>
+	<table class="table table-striped">
+		<thead>
+			<tr><td>Num</td><td>Name</td><td>Description</td></tr>
+		</thead>
+		<tbody>
+		<tr  ng-repeat="class in ctrl.classbydept" >
+			<!--<td > <a href = "#/classes/class">{{class.num}} {{class.name}} {{class.description}}</a></td> -->
+			
+			<td ng-bind="class.num"></td>
+			<td ng-bind="class.name"></td>
+			<td ng-bind="class.description"></td>
+			
+		</tr>
+		</tbody>
+		
+	</table>
+</div>
+
+

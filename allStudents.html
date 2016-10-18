@@ -1,0 +1,24 @@
+
+<h1>List of Students</h1>
+<div id="ctrl.student" >
+
+	
+	<table class="table table-striped" >
+		<thead>
+			<tr ><td>ID</td><td>Name</td><td>Required Credits</td><td>Description</td></tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat = "student in ctrl.students" >
+			<!--<td > <a href = "#/classes/class/{{class.id}}">{{class.num}} {{class.name}} {{class.description}}</a></td> -->
+			<td ng-bind="student.id"></td>
+			<td><a href = "#/students/student/{{student.id}}">{{student.first_name}} {{student.last_name}}</a></td>
+			<td ng-bind="student.first_semester.semester"></td>
+			<td ng-bind="student.major_id.name"></td>
+		
+			
+		</tr>
+		</tbody>
+		
+	</table>
+</div>
+

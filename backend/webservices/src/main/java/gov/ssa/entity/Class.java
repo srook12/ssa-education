@@ -1,17 +1,32 @@
 package gov.ssa.entity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.PersistenceContext;
+import javax.persistence.PersistenceContextType;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+
 
 @Entity
 @Table(name="class")
-public class Class {
+public class Class implements java.io.Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6420388931982631169L;
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
@@ -33,7 +48,7 @@ public class Class {
 	
 	@Column(name="description")
 	private String description;
-
+	
 	public Class() {}
 
 	public Class(Department department_id, String num, String name, int credits, String description) {
@@ -92,4 +107,5 @@ public class Class {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 }

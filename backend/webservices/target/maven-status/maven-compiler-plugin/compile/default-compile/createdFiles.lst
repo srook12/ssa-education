@@ -12,6 +12,7 @@ gov\ssa\controller\StudentController.class
 gov\ssa\entity\Student.class
 gov\ssa\controller\SchoolYearController.class
 gov\ssa\entity\Class.class
+gov\ssa\entity\MajorClass.class
 gov\ssa\dao\impl\InstructorDao.class
 gov\ssa\dao\impl\MajorDao.class
 gov\ssa\entity\Major.class

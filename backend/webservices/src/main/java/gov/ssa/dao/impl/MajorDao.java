@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import gov.ssa.dao.iface.IMajorDao;
 import gov.ssa.entity.Major;
+import gov.ssa.entity.Class;
 
 @Transactional
 @Repository
@@ -22,6 +23,13 @@ public class MajorDao implements IMajorDao {
 	public List<Major> getAllMajors() {
 		String hql = "from Major m order by m.id";		
 		return (List<Major>) hibernateTemplate.find(hql);
+	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<Class> getAllClassesForMajor(int id) {
+		String hql = "select mc.class_id from MajorClass mc where mc.major_id.id = " + id;
+		return (List<Class>) hibernateTemplate.find(hql);
 	}
 
 	@Override

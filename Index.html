@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="AppMod">
+<head>
+	<meta charset="UTF-8">
+	<title><title>S>>E>>P  <i>STUDENT ENROLLMENT PORTAL</i></title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+	
+	<script src="http://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js" type="text/javascript"></script>
+
+	<script src="appMod.js" type="text/javascript"></script>
+	<script src="controllers/masterConfig.js" type="text/javascript"></script>
+	<script src="controllers/class_con.js" type="text/javascript"></script>
+	<script src="controllers/dept_con.js" type="text/javascript"></script>
+	<script src="controllers/inst_con.js" type="text/javascript"></script>
+	<script src="controllers/major_con.js" type="text/javascript"></script>
+	<script src="controllers/student_con.js" type="text/javascript"></script>
+	
+	<style type="text/css">
+	</style>
+</head>
+<body >
+	<div id="allpage">
+		<div id="header">
+		</div>
+		<div id="menu">
+		     
+	
+			<ul > 
+			
+			    <li><img src = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSs2FQJI5zHUGCm1Ey69F4HryIBMSpx-m1NgFDMHWMkRf0YGk4w0g"</li>
+			    <li><a href="#/">HOME</a></li>
+				<li><a href="#/about">ABOUT</a></li>
+			    <li><a href="#/classes/class">Classes</a></li> 
+                <li><a href="#/departments/department">Departments</a></li>
+			    <li><a href="#/instructors/instructor">Instructors</a></li>
+				<li><a href="#/majors/major">Majors</a></li>
+				<li><a href="#/students/student">Students</a></li>
+				
+				
+			</ul>
+
+		</div>
+		
+		<div id="content">
+			<div ng-view></div>
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

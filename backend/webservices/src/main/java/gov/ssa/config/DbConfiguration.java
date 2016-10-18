@@ -15,6 +15,7 @@ import gov.ssa.entity.Class;
 import gov.ssa.entity.Department;
 import gov.ssa.entity.Instructor;
 import gov.ssa.entity.Major;
+import gov.ssa.entity.MajorClass;
 import gov.ssa.entity.SchoolYear;
 import gov.ssa.entity.Student;
 
@@ -33,7 +34,7 @@ public class DbConfiguration {
         dataSource.setDriverClassName("com.mysql.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/education?autoReconnect=true&useSSL=false");
         dataSource.setUsername("root");
-        dataSource.setPassword("evig1212");
+        dataSource.setPassword("admin");
         return dataSource;
     }
 
@@ -45,6 +46,7 @@ public class DbConfiguration {
         													  .addAnnotatedClasses(Department.class)
         													  .addAnnotatedClasses(Class.class)
         													  .addAnnotatedClasses(Instructor.class)
+        													  .addAnnotatedClasses(MajorClass.class)
                 .buildSessionFactory();
     }
 

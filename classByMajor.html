@@ -1,0 +1,26 @@
+
+<h1>Classes by Major</h1>
+<div id="student" >
+	
+	<table class="table table-striped" >
+		<thead>
+		    
+			<tr ><td>Id</td><td>Class Name</td><td>Department</td><td>Major</td></tr>
+		</thead>
+		<tbody>
+		<tr  ng-repeat="class in ctrl.classesByMajor">
+			<!--<td > <a href = "#/classes/class/{{class.id}}">{{class.num}} {{class.name}} {{class.description}}</a></td> -->
+			<td ng-bind="class.id"></td>
+			<td ng-bind ="class.name"></td>
+			<td ng-bind="class.department_id.name"></td>
+			
+			
+			<td ng-bind="ctrl.major.name"></td>
+			
+		</tr>
+		</tbody>
+		
+	</table>
+</div>
+
+
