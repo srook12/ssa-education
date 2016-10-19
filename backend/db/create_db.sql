@@ -146,7 +146,7 @@ create table student_classes_taken(
 	id int primary key auto_increment,
 	student_id int not null,
 	class_list_id int not null,
-	grade set ("A", "B", "C", "D", "F"),
+	grade varchar(2),
 	foreign key (student_id) references student(id)
 		on delete cascade
 		on update cascade,

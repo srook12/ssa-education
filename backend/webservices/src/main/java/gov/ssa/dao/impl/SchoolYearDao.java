@@ -23,6 +23,13 @@ public class SchoolYearDao implements ISchoolYearDao {
 		String hql = "from SchoolYear sy order by sy.id";		
 		return (List<SchoolYear>) hibernateTemplate.find(hql);
 	}
+	
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<SchoolYear> getSemestersSince(int start_semester) {
+		String hql = "from SchoolYear sy where sy.id >= " + start_semester;
+		return (List<SchoolYear>) hibernateTemplate.find(hql);
+	}
 
 	@Override
 	public SchoolYear getSchoolYearById(int id) {

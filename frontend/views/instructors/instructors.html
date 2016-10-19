@@ -1,0 +1,17 @@
+<div style="width:50%;margin:10px auto;">
+	<h1>Instructor Listing</h1>
+	<table class="table">
+		<thead>
+			<tr><td>Name</td><td>Year Hired</td><td>Tenured</td><td>Department</td></tr>
+		</thead>
+		<tbody>
+		<tr ng-repeat="instructor in ctrl.instructors">
+			<!-- <td ng-bind="student.first_name + ' ' + student.last_name"></td> -->
+			<td><a href="#/instructor/{{instructor.id}}">{{instructor.first_name + " " + instructor.last_name}}</a></td>
+			<td ng-bind="instructor.year_hired"></td>
+			<td>{{ctrl.interpretIsTenured(instructor.is_tenured)}}</td>
+			<td ng-bind="instructor.department_id.name"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>

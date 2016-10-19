@@ -4,6 +4,8 @@ C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\entity\ClassList.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\impl\TEService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\impl\DepartmentDao.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\iface\IClassListDao.java
+C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\impl\AcademicDao.java
+C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\AcademicController.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\iface\IDepartmentDao.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\DepartmentController.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\config\DbConfiguration.java
@@ -21,9 +23,11 @@ C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\impl\MajorDao.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\entity\Department.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\StudentController.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\impl\SchoolYearDao.java
+C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\iface\IAcademicService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\iface\IInstructorService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\entity\Classroom.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\iface\IClassDao.java
+C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\impl\AcademicService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\entity\Student.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\impl\SchoolYearService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\impl\InstructorDao.java
@@ -39,6 +43,7 @@ C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\TEController.j
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\InstructorController.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\entity\Building.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\ClassListController.java
+C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\iface\IAcademicDao.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\controller\SchoolYearController.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\iface\IStudentService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\impl\MajorService.java
@@ -48,5 +53,6 @@ C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\iface\ISchoolYearDao.
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\application\Application.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\impl\ClassListDao.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\entity\Major.java
+C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\entity\StudentClassesTaken.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\service\impl\StudentService.java
 C:\WS\default\SSA_Ed_Webservices\src\main\java\gov\ssa\dao\impl\TEDao.java

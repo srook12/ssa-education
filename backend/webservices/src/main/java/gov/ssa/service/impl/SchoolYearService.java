@@ -18,6 +18,11 @@ public class SchoolYearService implements ISchoolYearService {
 	public List<SchoolYear> getAllSchoolYears() {
 		return syDao.getAllSchoolYears();
 	}
+	
+	@Override
+	public List<SchoolYear> getSemestersSince(int begin_semester) {
+		return syDao.getSemestersSince(begin_semester);
+	}
 
 	@Override
 	public SchoolYear getSchoolYearById(int id) {

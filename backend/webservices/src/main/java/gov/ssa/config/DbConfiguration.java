@@ -21,6 +21,7 @@ import gov.ssa.entity.Major;
 import gov.ssa.entity.MajorClass;
 import gov.ssa.entity.SchoolYear;
 import gov.ssa.entity.Student;
+import gov.ssa.entity.StudentClassesTaken;
 
 @Configuration
 @EnableTransactionManagement
@@ -53,6 +54,7 @@ public class DbConfiguration {
         													  .addAnnotatedClasses(Building.class)
         													  .addAnnotatedClasses(Classroom.class)
         													  .addAnnotatedClasses(ClassList.class)
+        													  .addAnnotatedClasses(StudentClassesTaken.class)
                 .buildSessionFactory();
     }
 

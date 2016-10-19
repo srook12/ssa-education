@@ -1,0 +1,76 @@
+<div style="width:50%;margin:10px auto;">
+
+	<!-- Fall 2015
+	Class1		Grade
+	Class2		Grade
+	Class3		Grade
+	Class4		Grade
+
+	Spring 2016
+	Class 1		Grade
+	Class 2		Grade
+	Class 3		Grade
+	Class 4		Grade -->
+
+	<table class="table" ng-repeat="semester in ctrl.transcript">
+		<thead>
+			<tr><td ng-bind="semester.semester"></td><td>CRN</td><td>Course</td><td>Name</td><td>Section</td><td>Credits</td><td>Grade</td></tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="c_r in semester.courses">
+				<td>&nbsp;</td>
+				<td ng-bind="c_r.crn"></td>
+				<td ng-bind="c_r.course"></td>
+				<td ng-bind="c_r.name"></td>
+				<td ng-bind="c_r.section"></td>
+				<td ng-bind="c_r.credits"></td>
+				<td ng-bind="c_r.grade"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+				<td>Semester GPA Points</td><td ng-bind="semester.sem_points"></td>	
+			</tr>
+			<tr>
+				<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+				<td>Semester Credits</td><td ng-bind="semester.sem_credits"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+				<td>GPA</td><td ng-bind="semester.sem_gpa"></td>
+			</tr>
+		</tbody>
+	</table>
+	
+	<table class="table">
+		<!-- <p ng-bind="ctrl.calculate_cummulative_gpa();">{{2+10}}</p> -->
+		<tr>
+			<td>Total GPA Points</td>
+			<td>{{ctrl.calculate_total_points();}}</td>
+		</tr>
+		<tr>
+			<td>Total Credits</td>
+			<td>{{ctrl.calculate_total_credits();}}</td>
+		</tr>
+		<tr>
+			<td>Cummulative GPA</td>
+			<td>{{ctrl.calculate_cummulative_gpa();}}</td>
+		</tr>
+	</table>
+	<!-- <table class="table" ng-repeat="c_r in ctrl.classes_taken">
+	<thead><tr><td></td></tr></thead>
+	<tr ng-repeat="semester in c_r.class_list_id"><td>
+	<table class="table"> 
+		<thead>
+			<tr><td>Semester</td><td>Course</td><td>Grade</td></tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="class_record in ctrl.classes_taken">
+				<td ng-bind="class_record.class_list_id.semester.semester"></td>
+				<td ng-bind="class_record.class_list_id.class_id.department_id.code + ' ' + class_record.class_list_id.class_id.num"></td>
+				<td ng-bind="class_record.grade"></td>
+			</tr>
+		</tbody>
+	</table>
+	</td></tr>
+	</table> -->
+</div>

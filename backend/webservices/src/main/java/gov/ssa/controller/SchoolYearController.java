@@ -27,6 +27,11 @@ public class SchoolYearController {
         return new ResponseEntity<List<SchoolYear>>(syService.getAllSchoolYears(), HttpStatus.OK);
     }
 	
+	@RequestMapping(value="/school_years/semesters_since/{begin_semester}", method = RequestMethod.GET)
+	public ResponseEntity<List<SchoolYear>> getSemestersSince(@PathVariable("begin_semester") Integer begin_semester) {
+		return new ResponseEntity<List<SchoolYear>>(syService.getSemestersSince(begin_semester), HttpStatus.OK);
+	}
+	
 	@RequestMapping(value="/school_years/school_year/{id}", method = RequestMethod.GET)
 	public ResponseEntity<SchoolYear> getSchoolYearById(@PathVariable("id") Integer id) {
 		return new ResponseEntity<SchoolYear>(syService.getSchoolYearById(id), HttpStatus.OK);

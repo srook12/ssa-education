@@ -1,0 +1,50 @@
+<div style="width:50%;margin:10px auto;">
+<h1>Student Details</h1>
+<p>This is the student details page for student.id {{ctrl.id}}</p>
+	<div class="form-group row">
+		<label for="student-id" class="col-xs-2 col-form-label">ID</label>
+		 <div class="col-xs-10">
+		 	<input class="form-control" disabled="disabled" type="text" ng-model="ctrl.student.id" id="student-id">
+		</div>
+  	</div>
+	<div class="form-group row">
+		<label for="student-first_name" class="col-xs-2 col-form-label">First Name</label>
+		 <div class="col-xs-10">
+		 	<input class="form-control" type="text" ng-model="ctrl.student.first_name" id="student-first_name">
+		</div>
+  	</div>
+  	<div class="form-group row">
+		<label for="student-last_name" class="col-xs-2 col-form-label">Last Name</label>
+		 <div class="col-xs-10">
+		 	<input class="form-control" type="text" ng-model="ctrl.student.last_name" id="student-last_name">
+		</div>
+  	</div>
+  	<div class="form-group row">
+		<label for="student-gpa" class="col-xs-2 col-form-label">GPA</label>
+		 <div class="col-xs-10">
+		 	<input class="form-control" type="text" ng-model="ctrl.student.gpa" id="student-gpa">
+		</div>
+  	</div>
+  	<div class="form-group row">
+  		<label for="student-first_semester" class="col-xs-2 col-form-label">First Semester</label>
+  		<div class="col-xs-10">
+  			<select name="semester" ng-model="ctrl.semesters.selected" ng-options="obj.id as obj.semester for obj in ctrl.semesters"></select>
+  		</div>
+  	</div>
+
+  	<div class="form-group row">
+  		<label for="student-major" class="col-xs-2 col-form-label">Major</label>
+  		<div class="col-xs-10">
+  			<select name="major" ng-model="ctrl.majors.selected" ng-options="obj.id as obj.name for obj in ctrl.majors"></select>
+  		</div>
+  	</div>
+
+	<button type="button" class="btn btn-success" ng-click="ctrl.addStudent(ctrl.student.id,ctrl.student.first_name,ctrl.student.last_name,ctrl.semesters,ctrl.student.gpa,ctrl.majors)">Insert</button>
+	&nbsp;
+	<button type="button" class="btn btn-warning" ng-click="ctrl.updateStudent(ctrl.student.id,ctrl.student.first_name,ctrl.student.last_name,ctrl.semesters,ctrl.student.gpa,ctrl.majors)">Update</button>
+	&nbsp;
+	<button type="button" class="btn btn-danger" ng-click="ctrl.deleteStudent(ctrl.student.id)">Delete</button>
+	<button type="button" class="btn btn-default" ng-click="ctrl.clear(ctrl.student)">Clear</button>
+	&nbsp;
+	<a href="/#/student/portal/{{ctrl.id}}">Go to academic portal</a>
+</div>
