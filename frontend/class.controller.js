@@ -30,6 +30,12 @@ appMod
 
 				});
 
+			$http.get('http://localhost:8080/prereqs/prereq/' + self.id)
+				.then(function(resp) {
+					self.prereqs = resp.data;
+					console.log(self.prereqs);
+				});
+
 		}
 
 		self.clear = function(_class) {

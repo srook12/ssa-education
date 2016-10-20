@@ -9,6 +9,8 @@ public interface IStudentDao {
 	
 	Student getStudentById(int studentId);
 	
+	Student getStudentByAccount(int accountId);
+	
 	void addStudent(Student student);
 	
 	void updateStudent(Student student);

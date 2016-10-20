@@ -6,6 +6,13 @@ create database education;
 use education;
 
 -- create tables
+
+create table account(
+	id int primary key auto_increment,
+	username varchar(20) not null,
+	password varchar(20) not null
+);
+
 create table major(
 	id int primary key auto_increment,
 	name varchar(50) not null,
@@ -54,10 +61,12 @@ create table student(
 	first_semester int,
 	gpa decimal(4,2) default 0.00,
 	major_id int,
+	account_id int,
 	foreign key (major_id) references major(id)
 		on delete set null
 		on update cascade,
-	foreign key (first_semester) references school_year(id)
+	foreign key (first_semester) references school_year(id),
+	foreign key (account_id) references account(id)
 );
 
 -- create table student(
@@ -73,6 +82,7 @@ create table student(
 	-- gpa decimal(4, 2) default 0.00,
 	-- username_id int,
 	-- major_id int,
+	-- account_id int
 	-- foreign key (major_id) references major(id)
 		-- on delete set null
 		-- on update cascade,

@@ -32,6 +32,12 @@ public class StudentDao implements IStudentDao {
 		
 		return (Student) hibernateTemplate.find(hql).get(0);		
 	}
+    
+    @Override
+    public Student getStudentByAccount(int accountId) {
+    	String hql = "from Student as s where account_id.id = " + accountId;
+    	return (Student) hibernateTemplate.find(hql).get(0);
+    }
 
 	@Override
 	public void addStudent(Student student) {
@@ -40,7 +46,8 @@ public class StudentDao implements IStudentDao {
 											student.getLast_name(),
 											student.getGpa(),
 											student.getFirst_semester(),
-											student.getMajor_id()
+											student.getMajor_id(),
+											student.getAccount_id()
 				));
 	}
 

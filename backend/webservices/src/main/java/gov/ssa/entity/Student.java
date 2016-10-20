@@ -38,15 +38,21 @@ public class Student {
     @JoinColumn(name="major_id")
 	Major major_id;
 	
+	// Foreign key account_id
+	@ManyToOne
+	@JoinColumn(name="account_id")
+	Account account_id;
+	
 	public Student() {}
 		
-	public Student(String first_name, String last_name, double gpa, SchoolYear first_semester, Major major_id) {
+	public Student(String first_name, String last_name, double gpa, SchoolYear first_semester, Major major_id, Account account_id) {
 		super();
 		this.first_name = first_name;
 		this.last_name = last_name;
 		this.gpa = gpa;
 		this.first_semester = first_semester;
 		this.major_id = major_id;
+		this.account_id = account_id;
 	}
 
 	public int getId() {
@@ -97,4 +103,11 @@ public class Student {
 		this.major_id = major_id;
 	}
 
+	public Account getAccount_id() {
+		return account_id;
+	}
+
+	public void setAccount_id(Account account_id) {
+		this.account_id = account_id;
+	}	
 }

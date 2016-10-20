@@ -1,0 +1,14 @@
+<div style="width:50%;margin:10px auto;">
+	<h1>Login</h1>
+	<form name="login_form" ng-submit="ctrl.submit()">
+		<div class="form-group">
+			<label for="uname">User name:</label>
+			<input class="form-control uname" type="text" id="uname" name="uname" ng-model="ctrl.username" />
+		</div>
+		<div class="form-group">
+			<label>Password:</label>
+			<input class="form-control pword" type="password" id="pword" name="pword" ng-model="ctrl.password" />
+		</div>
+		<button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>

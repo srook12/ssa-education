@@ -2,7 +2,7 @@ delete from student;
 
 -- insert into student
 
-insert into student (first_name, last_name, first_semester, major_id) values ("Forrest","Newton",4,13);
+insert into student (first_name, last_name, first_semester, major_id, account_id) values ("Forrest","Newton",4,13,1);
 insert into student (first_name, last_name, first_semester, major_id) values ("Eugene","Willis",4,7);
 insert into student (first_name, last_name, first_semester, major_id) values ("Ruben","Burns",5,6);
 insert into student (first_name, last_name, first_semester, major_id) values ("Blake","Graves",5,5);

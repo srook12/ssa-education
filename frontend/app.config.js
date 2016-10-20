@@ -25,11 +25,8 @@ appMod
 			templateUrl: 'views/students/transcript.html',
 			controller: 'PortalCtrl',
 			controllerAs: 'ctrl'
-		})
 
-
-
-		.when('/major', {
+		}).when('/major', {
 			templateUrl: 'views/majors/majors.html',
 			controller: 'MajorCtrl',
 			controllerAs: 'ctrl'	
@@ -74,6 +71,11 @@ appMod
 			controller: 'ClassCtrl',
 			controllerAs: 'ctrl'
 				
+		}).when('/class/prereqs/:classId', {
+			templateUrl: 'views/classes/prereqs.html',
+			controller: 'ClassCtrl',
+			controllerAs: 'ctrl'	
+
 		}).when('/instructor', {
 			templateUrl: 'views/instructors/instructors.html',
 			controller: 'InstCtrl',
@@ -94,6 +96,10 @@ appMod
 			controller: 'CLCtrl',
 			controllerAs: 'ctrl'	
 
+		}).when('/login', {
+			templateUrl: 'views/login.html',
+			controller: 'LoginCtrl',
+			controllerAs: 'ctrl'
 		})
 
 

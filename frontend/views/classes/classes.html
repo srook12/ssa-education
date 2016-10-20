@@ -2,7 +2,7 @@
 	<h1>Class Listing</h1>
 	<table class="table">
 		<thead>
-			<tr><td>Class</td><td>Name</td><td>Credits</td></tr>
+			<tr><td>Class</td><td>Name</td><td>Credits</td><td>Prerequisites</td></tr>
 		</thead>
 		<tbody>
 		<tr ng-repeat="class in ctrl.classes">
@@ -10,6 +10,7 @@
 			<td><a href="#/class/{{class.id}}">{{class.department_id.code + " " + class.num}}</a></td>
 			<td ng-bind="class.name"></td>
 			<td ng-bind="class.credits"></td>
+			<td><a href="#/class/prereqs/{{class.id}}">Prerequisites</a></td>
 		</tr>
 		</tbody>
 	</table>
